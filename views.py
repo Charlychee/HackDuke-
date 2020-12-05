@@ -20,5 +20,9 @@ def submit_page():
        upload = request.files['profilePic']
     return render_template("registration.html")
 
+@app.route("/match", methods=["POST", "GET"])
+def match_page():
+    return render_template("match.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
