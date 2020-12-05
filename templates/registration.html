@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hack Duke" />
+    <meta name="description" content="Increasing the quality of life for the elderly." />
+    <meta name="keywords" content="health, quality of life, elderly" />
+    <!--<link rel="stylesheet" type="text/css" href="" /> -->
+    <title> Heal Together </title>
+</head>
+<body>
+    <h3> Let's heal together. </h3>
+    <div class="fields">
+        <form action="#" id="submissionForm" method="post" enctype="multipart/form-data" onsubmit="return confirm('Do you really want to submit the form?');">
+            <div class="fields">
+                <label for="name"> What's your name? <span style="color:red"> * </span><br /></label>
+                <input type="text" name="name" class="input" required />
+            </div>
+            <div class="fields">
+                <label for="dob"> Date of Birth <span style="color:red"> * </span><br /> </label>
+                <input type="text" name="dob" class="input" required />
+            </div>
+            <div class="fields">
+                <label for="diagnosis"> Diagnosis <span style="color:red"> * </span><br /> </label>
+                <input type="text" name="diagnosis" class="input" required />
+            </div>
+            <div class="fields">
+                <label for="purpose"> What are you looking for? <span style="color:red"> * </span><br /> </label>
+                <textarea name="purpose" class="input" form="submissionForm" rows="6" cols="50" required></textarea>
+            </div>
+            <div class="fields">
+                <label for="contact"> Who would you like connect with? <span style="color:red"> * </span><br /> </label>
+                <textarea name="text" class="input" form="submissionForm" rows="6" cols="50" required></textarea>
+            </div>
+            <div>
+                <label for="img">Select your profile picture </label> <br />
+                <input type="file" name="profilePic" id="upload" accept="image/*"> <br />
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>
