@@ -18,8 +18,6 @@ def submit_page():
        purpose = request.form.getlist("purpose")
        contact = request.form.getlist("contact")
        upload = request.files['profilePic']
-       print(purpose)
-       print(contact)
     return render_template("registration.html")
 
 if __name__ == "__main__":
