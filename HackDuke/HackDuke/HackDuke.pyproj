@@ -29,7 +29,9 @@
   <ItemGroup>
     <Compile Include="runserver.py" />
     <Compile Include="HackDuke\__init__.py" />
-    <Compile Include="HackDuke\views.py" />
+    <Compile Include="..\..\views.py">
+      <Link>HackDuke\views.py</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HackDuke\" />

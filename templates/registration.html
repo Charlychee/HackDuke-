@@ -28,8 +28,15 @@
                 <input type="text" name="diagnosis" class="input" required />
             </div>
             <div class="fields">
-                <label for="purpose"> What are you looking for? <span style="color:red"> * </span><br /> </label>
-                <textarea name="purpose" class="input" form="submissionForm" rows="6" cols="50" required></textarea>
+                <label for="purpose"> What are you looking for? (select multiple) <span style="color:red"> * </span><br /> </label>
+                <input type="checkbox" name="option1" value="support">
+                <label for="support"> Support </label><br>
+                <input type="checkbox" name="option2" value="companionship">
+                <label for="companionship"> Companionship </label><br>
+                <input type="checkbox" name="option3" value="motivation">
+                <label for="motivation"> Motivation </label><br>
+                <input type="checkbox" name="option4" value="others with similar experiences">
+                <label for="others"> Others with Similar Experiences </label><br><br>
             </div>
             <div class="fields">
                 <label for="contact"> Who would you like connect with? <span style="color:red"> * </span><br /> </label>
@@ -39,6 +46,7 @@
                 <label for="img">Select your profile picture </label> <br />
                 <input type="file" name="profilePic" id="upload" accept="image/*"> <br />
             </div>
+
         </form>
 
     </div>
