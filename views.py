@@ -15,12 +15,11 @@ def submit_page():
        name = request.form["name"]
        dob = request.form["dob"]
        diagnosis = request.form["diagnosis"]
-       poption1 = request.form["poption1"]
-       poption2 = request.form["poption2"]
-       coption1 = request.form["coption1"]
+       purpose = request.form.getlist("purpose")
+       contact = request.form.getlist("contact")
        upload = request.files['profilePic']
-       print(poption1)
-       print(poption2)
+       print(purpose)
+       print(contact)
     return render_template("registration.html")
 
 if __name__ == "__main__":
