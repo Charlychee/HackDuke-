@@ -12,15 +12,15 @@ app = Flask(__name__)
 @app.route("/registration", methods=["POST", "GET"])
 def submit_page():
     if request.method == "POST":
-       print("User's netID: " + netID)
        name = request.form["name"]
        dob = request.form["dob"]
        diagnosis = request.form["diagnosis"]
-       purpose = request.form["purpose"]
-       contact = request.form["contact"]
-       description = request.form["descrip"]
+       poption1 = request.form["poption1"]
+       poption2 = request.form["poption2"]
+       coption1 = request.form["coption1"]
        upload = request.files['profilePic']
-       print(name)
+       print(poption1)
+       print(poption2)
     return render_template("registration.html")
 
 if __name__ == "__main__":
