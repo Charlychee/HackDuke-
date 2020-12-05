@@ -12,6 +12,27 @@
     <title> Heal Together </title>
 </head>
 <body>
+    <script>
+        function check(input) {
+
+            var checkboxes = document.getElementsByClassName("radioCheck");
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                //uncheck all
+                if (checkboxes[i].checked == true) {
+                    checkboxes[i].checked = false;
+                }
+            }
+
+            //set checked of clicked object
+            if (input.checked == true) {
+                input.checked = false;
+            }
+            else {
+                input.checked = true;
+            }
+        }
+    </script>
     <h3> Let's heal together. </h3>
     <div class="fields">
         <form action="#" id="submissionForm" method="post" enctype="multipart/form-data" onsubmit="return confirm('Do you really want to submit the form?');">
@@ -29,18 +50,23 @@
             </div>
             <div class="fields">
                 <label for="purpose"> What are you looking for? (select multiple) <span style="color:red"> * </span><br /> </label>
-                <input type="checkbox" name="option1" value="support">
+                <input type="checkbox" name="poption1" value="support">
                 <label for="support"> Support </label><br>
-                <input type="checkbox" name="option2" value="companionship">
+                <input type="checkbox" name="poption2" value="companionship">
                 <label for="companionship"> Companionship </label><br>
-                <input type="checkbox" name="option3" value="motivation">
+                <input type="checkbox" name="poption3" value="motivation">
                 <label for="motivation"> Motivation </label><br>
-                <input type="checkbox" name="option4" value="others with similar experiences">
+                <input type="checkbox" name="poption4" value="others with similar experiences">
                 <label for="others"> Others with Similar Experiences </label><br><br>
             </div>
             <div class="fields">
-                <label for="contact"> Who would you like connect with? <span style="color:red"> * </span><br /> </label>
-                <textarea name="contact" class="input" form="submissionForm" rows="6" cols="50" required></textarea>
+                <label for="contact"> Who would you like as a first link? <span style="color:red"> * </span><br /> </label>
+                <input type="checkbox" class="radioCheck" name="coption1" onclick="check(this);" value="survivor/volunteer, 1 on 1">
+                <label for="surv/vol"> Survivor/Volunteer, 1 on 1 </label><br>
+                <input type="checkbox" class="radioCheck" name="coption2" onclick="check(this);" value="other">
+                <label for="companionship"> Other Patient, 1 on 1 </label><br>
+                <input type="checkbox" class="radioCheck" name="coption3" onclick="check(this);" value="group">
+                <label for="group"> Group Support </label><br><br />
             </div>
             <div>
                 <label for="img">Select your profile picture </label> <br />
