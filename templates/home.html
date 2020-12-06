@@ -49,14 +49,17 @@
         function redirectRegis() {
             window.location.replace("{{url_for('submit_page')}}");
         }
+        function redirectLogin() {
+            window.location.replace("{{url_for('login_page')}}");
+        }
     </script>
     <div class="topnav">
         <a><img src="../static/banner.png" id="banner" onmouseover="toggleButtonOn(id)" /></a>
-        <a><img src="../static/home.png" id="home" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move" /></a>
-        <a><img src="../static/plus.png" id="plus" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move" /></a>
-        <a><img src="../static/chat.png" id="chat" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=80 class="move" /></a>
-        <a><img src="../static/person.png" id="person" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move" /></a>
-        <a> <h3 class="button" id="log"> Log Out </h3> </a>
+        <a><img src="../static/home.png" id="home" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" onclick="redirectLogin()" width=90 class="move" /></a>
+        <a><img src="../static/plus.png" id="plus" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" onclick="redirectLogin()" width=90 class="move" /></a>
+        <a><img src="../static/chat.png" id="chat" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" onclick="redirectLogin()" width=80 class="move" /></a>
+        <a><img src="../static/person.png" id="person" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" onclick="redirectLogin()" width=90 class="move" /></a>
+        <a> <h3 class="button" id="log" onclick="redirectLogin()"> Log In </h3> </a>
     </div>
     <div>
         <img src="../static/elderly.png" id="pic" />
@@ -67,7 +70,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="column"> "Great platform to foaster a community! Heal together helped me through the hardest period of my life." <br /> <br />-Margaet V. <br /> Lung Cancer, Depression</div>
+        <div class="column"> "Great platform to foaster a community! Heal together helped me through the hardest period of my life." <br /> <br />-Margaret V. <br /> Lung Cancer, Depression</div>
         <div class="column"> "Amazing! I love reading about other people's stories. This platform helped me get support during the pandemic." <br /> <br /> -Kenneth C. <br /> COPD, Heart Disease</div>
         <div class="column"> "Highly recommend this to anyone dealing with any condition! Great way to share experiences and keep motivated." <br /> <br /> -Sharon D. <br /> COVID-19, Kidney Disease</div>
     </div>
