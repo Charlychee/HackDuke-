@@ -1,7 +1,87 @@
+* {
+	margin: 0;
+  }
+
 body {
 	font-family: 'Helvetica', sans-serif;
-	text-align: center;
-	padding: 20px;
-	background-image: url(../static/background2.jpeg);
-	background-size: 1450px 850px;
+	font-size: 20px;
+	text-align: left;
+	background-color: rgb(182, 211, 253);
 }
+
+img {
+	height:  100px;
+}
+
+.home {
+	height:75%;
+}
+
+.topbar {
+	background-color: white;
+	height:101px;
+}
+
+header {
+	color: rgb(74, 145, 247);
+	font-size: 40px;
+	font-weight: 600;
+}
+
+
+.fields {
+	background-color: white;
+	width: 50%;
+	margin: auto;
+	padding: 40px 60px;
+	position:relative;
+	top:30px;
+}
+
+input[type=text]{
+	font-size: 18px;
+	width: 50%;
+	padding: 3px 3px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border-style: solid;
+	border-color: rgba(61,61,61,1);
+	border-width: 1px;
+  }
+
+  input[type=date]{
+	font-size: 18px;
+	width: 50%;
+	padding: 3px 3px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border-style: solid;
+	border-color: rgba(61,61,61,1);
+	border-width: 1px;
+	font-family: 'Helvetica', sans-serif;
+	text-align: left;
+  }
+
+input[type=submit]{
+	font-size: 20px;
+	width: 25%;
+	padding: 12px 20px;
+	color: white;
+	background-color:  rgb(74, 145, 247);
+	border-width: 0px;
+}
+
+
+span.logout{
+	font-size: 20px;
+	width: 25%;
+	padding: 12px 20px;
+	color: white;
+	background-color:  rgb(74, 145, 247);
+	border-width: 0px;
+	text-align: center;
+	position:relative;
+	top: -30px;
+}
+
+
