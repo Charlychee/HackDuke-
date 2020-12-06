@@ -11,7 +11,7 @@ import os
 from werkzeug.utils import  secure_filename
 
 validated = False
-cred = ""
+info = ""
 
 app = Flask(__name__)
 
@@ -72,11 +72,11 @@ def login_page():
         result = cur.fetchone()
         if result:
             cred = email
-            print(cred)
             validated = True
-
             return profile_page(cred)
-    return render_template("login_fail.html")
+        else:
+            return render_template("login_fail.html")
+    return render_template("login.html")
 
 @app.route("/",methods=['GET', 'POST'])
 def home_page():
@@ -90,6 +90,7 @@ def media_page():
 
 @app.route("/profile",methods=['GET', 'POST'])
 def profile_page(cred):
+    global info
     with sql.connect('database.db') as con:
         cur = con.cursor()
         cur.execute("SELECT path, name FROM users WHERE email=(?) ", [cred])
@@ -98,12 +99,18 @@ def profile_page(cred):
     output = []
     output.append('..' + result[0][result[0].find('HackDukeApp')+11:].replace('\\','/'))
     output.append(result[1])
+    info = output
     return render_template("profile.html", output=output)
 
 @app.route("/delete/<name>",methods=['GET'])
 def delete_user(name):
     removeUser(name)
     return name + ' will be removed from the table'
+
+
+@app.route("/chat", methods=['GET'])
+def chat_page():
+    return render_template("chat.html",output=info)
 
 if __name__ == "__main__":
     app.run(debug=True)
