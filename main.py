@@ -8,6 +8,9 @@ from flask import Flask, render_template, redirect, request, url_for, send_from_
 import sqlite3 as sql
 from sqlite import removeUser
 
+validated = False
+cred = ""
+
 app = Flask(__name__)
 
 
@@ -46,6 +49,19 @@ def match_page():
 
 @app.route("/login", methods=["POST", "GET"])
 def login_page():
+    if request.method == "POST":
+        email = request.form["email"]
+        pwd = request.form["password"]
+        with sql.connect("database.db") as con:
+           cur = con.cursor()
+           cur.execute("""SELECT email ,pwd FROM users WHERE email=? AND pwd=?""",
+                (email, pwd))
+           con.commit()
+        result = cur.fetchone()
+        if result:
+            cred = email
+            validated = True
+            return render_template("media.html")
     return render_template("login.html")
 
 @app.route("/",methods=['GET', 'POST'])
@@ -54,7 +70,9 @@ def home_page():
 
 @app.route("/media",methods=['GET', 'POST'])
 def media_page():
-    return render_template("media.html")
+    if validated:
+        return render_template("media.html")
+    return render_template("login.html")
 
 @app.route("/delete/<name>",methods=['GET'])
 def delete_user(name):
