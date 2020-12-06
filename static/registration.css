@@ -1,7 +1,3 @@
-* {
-	margin: 0;
-  }
-
 body {
 	font-family: 'Helvetica', sans-serif;
 	font-size: 20px;
@@ -16,7 +12,7 @@ body {
 	margin-left: -25px;
 	margin-right: -25px;
 	background-color: white;
-	padding: 50px;
+	padding: 60px;
 }
 
 .topnav a {
@@ -44,24 +40,6 @@ body {
 	background-color:#E7EEF8;
 }
 
-img {
-	height:  100px;
-}
-
-.home {
-	height:75%;
-}
-
-.topbar {
-	background-color: white;
-	height:101px;
-}
-
-header {
-	color: rgb(74, 145, 247);
-	font-size: 40px;
-	font-weight: 600;
-}
 
 
 .fields {
@@ -118,5 +96,21 @@ span.logout{
 	position:relative;
 	top: -30px;
 }
+#log {
+	width: 100%;
+	margin-top: 30px;
+}
 
+.button:hover {
+	background-color: #E7EEF8;
+}
+
+.move {
+	margin-top: 15px;
+}
+
+#banner {
+	margin-left: -50px;
+	margin-right: 70px;
+}
 
