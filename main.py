@@ -84,6 +84,10 @@ def media_page():
         return render_template("media.html")
     return render_template("login.html")
 
+@app.route("/profile",methods=['GET', 'POST'])
+def profile_page():
+    return render_template("profile.html")
+
 @app.route("/delete/<name>",methods=['GET'])
 def delete_user(name):
     removeUser(name)
