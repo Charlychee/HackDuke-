@@ -12,12 +12,47 @@
     <title> Heal Together </title>
 </head>
 <body>
+    <script>
+        function toggleButtonOn(button) {
+            switch (button) {
+                case 'home':
+                    document.getElementById("home").src = "../static/homeclick.png";
+                    break;
+                case 'plus':
+                    document.getElementById("plus").src = "../static/plusclick.png";
+                    break;
+                case 'chat':
+                    document.getElementById("chat").src = "../static/chatclick.png";
+                    break;
+                case 'person':
+                    document.getElementById("person").src = "../static/personclick.png";
+
+            }
+        }
+
+        function toggleButtonOff(button) {
+            switch (button) {
+                case 'home':
+                    document.getElementById("home").src = "../static/home.png";
+                    break;
+                case 'plus':
+                    document.getElementById("plus").src = "../static/plus.png";
+                    break;
+                case 'chat':
+                    document.getElementById("chat").src = "../static/chat.png";
+                    break;
+                case 'person':
+                    document.getElementById("person").src = "../static/person.png";
+
+            }
+        }
+    </script>
     <div class="topnav">
-        <a><img src="../static/banner.png" id="banner"/></a>
-        <a><img src="../static/home.png" width=90 class="move"/></a>
-        <a><img src="../static/plus.png" width=90 class="move"/></a>
-        <a><img src="../static/chat.png" width=80 class="move"/></a>
-        <a><img src="../static/person.png" width=90 class="move"/></a>
+        <a><img src="../static/banner.png" id="banner" onmouseover="toggleButtonOn(id)"/></a>
+        <a><img src="../static/home.png" id="home" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a><img src="../static/plus.png" id="plus" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a><img src="../static/chat.png" id="chat" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=80 class="move"/></a>
+        <a><img src="../static/person.png" id="person" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
         <a> <h3 class="button" id="log"> Log Out </h3> </a>
     </div>
     <div class="profile">
