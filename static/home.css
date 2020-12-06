@@ -78,14 +78,10 @@ body {
 }
 #join {
 	position: absolute;
-<<<<<<< HEAD
-	top: 65%;
-=======
-	bottom: 5%;
->>>>>>> a36cb6a19c29c0acfb50b63e8126314b1d99a88f
+	bottom: 25%;
 	left: 50%;
 	width: 10%;
-	height: 5;
+	height: 5%;
 	text-align: center;
 	transform: translate(-50%, -50%);
 	font-size: 30px;
