@@ -46,6 +46,9 @@
 
             }
         }
+        function redirectRegis() {
+            window.location.replace("{{url_for('submit_page')}}");
+        }
     </script>
     <div class="topnav">
         <a><img src="../static/banner.png" id="banner" onmouseover="toggleButtonOn(id)" /></a>
@@ -60,7 +63,7 @@
         <div>
             <h1 id="head"> Let's heal together. </h1>
             <h2 id="descrip"> A social network for people during <br />and after treatment</h2>
-            <h3 class="button" id="join">Join us</h3>
+            <h3 class="button" id="join" onclick="redirectRegis()">Join us</h3>
         </div>
     </div>
     <div class="row">
