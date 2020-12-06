@@ -61,7 +61,7 @@ body {
 
 #head {
 	position: absolute;
-	top: 45%;
+	top: 30%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
@@ -69,7 +69,7 @@ body {
 }
 #descrip {
 	position: absolute;
-	top: 70%;
+	top: 50%;
 	left: 49%;
 	transform: translate(-50%, -50%);
 	color: white;
@@ -78,11 +78,18 @@ body {
 }
 #join {
 	position: absolute;
+<<<<<<< HEAD
+	top: 65%;
+=======
 	bottom: 5%;
+>>>>>>> a36cb6a19c29c0acfb50b63e8126314b1d99a88f
 	left: 50%;
 	width: 10%;
+	height: 5;
 	text-align: center;
 	transform: translate(-50%, -50%);
+	font-size: 30px;
+
 }
 .column {
 	float: left;

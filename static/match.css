@@ -77,14 +77,14 @@ body {
 #send {
 	position: relative;
 	bottom: 5%;
-	left: -20%;
+	left: -5%;
 	display: inline-block;
 	min-width: 150px;
 }
 #view {
 	position: relative;
 	bottom: 5%;
-	right: 15%;
+	right: 0%;
 	display: inline-block;
 	min-width: 150px;
 }
