@@ -14,15 +14,17 @@ app = Flask(__name__)
 @app.route("/registration", methods=["POST", "GET"])
 def submit_page():
     if request.method == "POST":
+       email = request.form["email"]
+       pwd = request.form["pwd"]
        name = request.form["name"]
-       dob = request.form["dob"]
-       diagnosis = request.form["diagnosis"]
-       purpose = request.form.getlist("purpose")
-       contact = request.form.getlist("contact")
-       upload = request.files['profilePic']
+       #dob = request.form["dob"]
+       #diagnosis = request.form["diagnosis"]
+       #purpose = request.form.getlist("purpose")
+       #contact = request.form.getlist("contact")
+       #upload = request.files['profilePic']
        with sql.connect("database.db") as con:
            cur = con.cursor()
-           cur.execute("INSERT INTO users (name) VALUES (?)",(name) )
+           cur.execute("INSERT INTO users (email, pwd, name) VALUES (?,?,?)",(email, pwd, name) )
            con.commit()
     return render_template("registration.html")
 
