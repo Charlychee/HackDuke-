@@ -12,6 +12,7 @@ from werkzeug.utils import  secure_filename
 
 validated = False
 info = ""
+cred = ""
 
 app = Flask(__name__)
 
@@ -73,13 +74,21 @@ def login_page():
         if result:
             cred = email
             validated = True
-            return profile_page(cred)
+            return profile_page()
         else:
             return render_template("login_fail.html")
     return render_template("login.html")
 
 @app.route("/",methods=['GET', 'POST'])
 def home_page():
+    if validated:
+        return render_template("home_loggedin.html")
+    return render_template("home.html")
+
+@app.route("/logout",methods=['GET','POST'])
+def logout():
+    global validated
+    validated = False
     return render_template("home.html")
 
 @app.route("/media",methods=['GET', 'POST'])
@@ -89,7 +98,7 @@ def media_page():
     return render_template("login.html")
 
 @app.route("/profile",methods=['GET', 'POST'])
-def profile_page(cred):
+def profile_page():
     global info
     with sql.connect('database.db') as con:
         cur = con.cursor()
