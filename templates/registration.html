@@ -33,22 +33,31 @@
             }
         }
     </script>
-    <h3> Let's heal together. </h3>
-    <div class="fields">
+   <div class = "topbar">
+    <img src="../static/banner.png">  
+    <img class = "home" src="../static/Home.png"> 
+    <img class = "home"src="../static/plus.png">  
+    <img class = "home"src="../static/chat.png">  
+    <img class = "home"src="../static/person.png"> 
+    <!--!!!CHANGE THE LINK TO LOG OUT LINK!!! --> 
+    <a href="hiangiesyaoi.com"> <div class = "logout"><span>Log out</span></div></a>
+   </div>
+   <div class = "fields">
+        <header> Let's heal together. </header>
         <form action="#" id="submissionForm" method="post" enctype="multipart/form-data" onsubmit="return confirm('Do you really want to submit the form?');">
-            <div class="fields">
-                <label for="name"> What's your name? <span style="color:red"> * </span><br /></label>
+            <div>
+                <label for="name"> Full Name: <span style="color:red"> * </span><br /></label>
                 <input type="text" name="name" class="input" required />
             </div>
-            <div class="fields">
-                <label for="dob"> Date of Birth <span style="color:red"> * </span><br /> </label>
+            <div>
+                <label for="dob"> Date of Birth: <span style="color:red"> * </span><br /> </label>
                 <input type="text" name="dob" class="input" required />
             </div>
-            <div class="fields">
-                <label for="diagnosis"> Diagnosis <span style="color:red"> * </span><br /> </label>
+            <div>
+                <label for="diagnosis"> Diagnosis: <span style="color:red"> * </span><br /> </label>
                 <input type="text" name="diagnosis" class="input" required />
             </div>
-            <div class="fields">
+            <div>
                 <label for="purpose"> What are you looking for? (select multiple) <span style="color:red"> * </span><br /> </label>
                 <input type="checkbox" name="purpose" value="support">
                 <label for="support"> Support </label><br>
@@ -59,7 +68,7 @@
                 <input type="checkbox" name="purpose" value="others with similar experiences">
                 <label for="others"> Others with Similar Experiences </label><br><br>
             </div>
-            <div class="fields">
+            <div>
                 <label for="contact"> Who would you like as a first link? <span style="color:red"> * </span><br /> </label>
                 <input type="checkbox" class="radioCheck" name="contact" onclick="check(this);" value="survivor/volunteer, 1 on 1">
                 <label for="surv/vol"> Survivor/Volunteer, 1 on 1 </label><br>
@@ -69,7 +78,7 @@
                 <label for="group"> Group Support </label><br><br />
             </div>
             <div>
-                <label for="img">Select your profile picture </label> <br />
+                <label for="img">Select your profile picture </label> 
                 <input type="file" name="profilePic" id="upload" accept="image/*"> <br />
             </div>
             <input type="submit" value="Submit" id="enter" />
