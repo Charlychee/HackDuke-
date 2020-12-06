@@ -1,0 +1,50 @@
+body {
+	font-family: 'Helvetica', sans-serif;
+	padding: 20px;
+}
+.topnav {
+	background-color: white;
+	margin-top: -28px;
+	margin-bottom: 50px;
+	margin-left: -25px;
+	margin-right: -25px;
+	background-color: white;
+	padding: 50px;
+}
+
+.topnav a {
+	float: left;
+	text-align: center;
+	padding-left: 4%;
+	text-decoration: none;
+	background-color: white;
+	padding-top: -20px;
+	margin-top: -50px;
+	vertical-align: bottom;
+}
+
+.button {
+	margin: 10px auto;
+	background-color: rgb(74, 145, 247);
+	width: 30%;
+	padding: 8px;
+	color: white;
+	font-weight: 200;
+}
+.button:hover {
+	background-color:#E7EEF8;
+}
+
+#banner {
+	margin-left: -50px;
+	margin-right: 70px;
+}
+
+#log {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.move {
+	margin-top: 15px;
+}
