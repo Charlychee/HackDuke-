@@ -32,16 +32,52 @@
                 input.checked = true;
             }
         }
+
+        function toggleButtonOn(button) {
+            switch (button) {
+                case 'home':
+                    document.getElementById("home").src = "../static/homeclick.png";
+                    break;
+                case 'plus':
+                    document.getElementById("plus").src = "../static/plusclick.png";
+                    break;
+                case 'chat':
+                    document.getElementById("chat").src = "../static/chatclick.png";
+                    break;
+                case 'person':
+                    document.getElementById("person").src = "../static/personclick.png";
+
+            }
+        }
+
+        function toggleButtonOff(button) {
+            switch (button) {
+                case 'home':
+                    document.getElementById("home").src = "../static/home.png";
+                    break;
+                case 'plus':
+                    document.getElementById("plus").src = "../static/plus.png";
+                    break;
+                case 'chat':
+                    document.getElementById("chat").src = "../static/chat.png";
+                    break;
+                case 'person':
+                    document.getElementById("person").src = "../static/person.png";
+
+            }
+        }
+        function redirectHome() {
+            window.location.replace("{{url_for('home_page')}}");
+        }
     </script>
-   <div class = "topbar">
-    <img src="../static/banner.png">  
-    <img class = "home" src="../static/Home.png"> 
-    <img class = "home"src="../static/plus.png">  
-    <img class = "home"src="../static/chat.png">  
-    <img class = "home"src="../static/person.png"> 
-    <!--!!!CHANGE THE LINK TO LOG OUT LINK!!! --> 
-    <a href="logout.com"> <span class = "logout">Log out</span></a>
-   </div>
+   <div class="topnav">
+        <a><img src="../static/banner.png" id="banner" onmouseover="toggleButtonOn(id)"/></a>
+        <a><img src="../static/home.png" id="home" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" onclick="redirectHome()" width=90 class="move"/></a>
+        <a><img src="../static/plus.png" id="plus" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a><img src="../static/chat.png" id="chat" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=80 class="move"/></a>
+        <a><img src="../static/person.png" id="person" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a> <h3 class="button" id="log"> Log Out </h3> </a>
+    </div>
    <div class = "fields">
         <header> Let's heal together. </header>
         <br>
@@ -88,7 +124,7 @@
                 <input type="file" name="profilePic" id="upload" accept="image/*"> <br />
             </div>
             <br><br>
-            <input type="submit" value="Submit" id="enter" />
+            <input type="submit" class="button" value="Submit" id="enter" />
         </form>
 
     </div>
