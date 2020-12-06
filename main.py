@@ -50,5 +50,10 @@ def home_page():
 def media_page():
     return render_template("media.html")
 
+@app.route("/delete/<name>",methods=['GET'])
+def delete_user(name):
+    removeUser(name)
+    return name + ' will be removed from the table'
+
 if __name__ == "__main__":
     app.run(debug=True)
