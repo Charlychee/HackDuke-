@@ -70,15 +70,38 @@ body {
 	margin-right:70px;
 }
 
+.row{
+	margin: -50px;
+
+}
+
 .column {
   float: left;
 }
 
 #left {
-  width: 25%;
-  background-color: red;
+	width: 25%;
+	background-color: #B6D3FD;
+	padding: 20px;
+	margin-left: 20px;
+	line-height: 50px;
+	text-align: left;
 }
 
 #right {
   width: 75%;
+}
+
+span{
+	position: relative;
+	font-size: 20px;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1px 0;
+	padding: 0;
 }
