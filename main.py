@@ -19,12 +19,15 @@ app = Flask(__name__)
 
 @app.route("/registration", methods=["POST", "GET"])
 def submit_page():
+    global validated
     if request.method == "POST":
         email = request.form["email"]
         pwd = request.form["pwd"]
         name = request.form["name"]
         file = request.files['profilePic']
         path = secure_filename(file.filename)
+        if not path:
+            path = 'person.png'
         full_path = app.instance_path.rstrip("instance") + "static\\" + path
         file.save(full_path)
         #path.save(os.path.join(app.instance_path), "upload", secure_filename(path.filename))
@@ -38,6 +41,7 @@ def submit_page():
             cur.execute("INSERT INTO users (email, pwd, name, path) VALUES (?,?,?, ?)",(email, pwd, name, full_path))
             con.commit()
         print(full_path)
+        return redirect("http://127.0.0.1:5000/login")
     return render_template("registration.html")
 
 @app.route('/list')
