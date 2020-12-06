@@ -1,5 +1,7 @@
 class User:
-    def __init__(self, name, dob, diagnosis, purpose, contacts, profile):
+    def __init__(self, email, pwd, name, dob, diagnosis, purpose, contacts, profile):
+        self.email = email
+        self.pwd = pwd
         self.name = name
         self.dob = dob
         self.diagnosis = diagnosis
@@ -9,7 +11,7 @@ class User:
 
     @property
     def __repr__(self):
-        return "User('{}','{}','{}','{}','{}')".format(self.name, self.dob, self.diagnosis, self.purpose, self.contacts,self.profile)
+        return "User('{}','{}','{}','{}','{}','{}','{}','{}')".format(self.email, self.pwd, self.name, self.dob, self.diagnosis, self.purpose, self.contacts,self.profile)
 
 class Posts:
     def __init__(self, author, type, path, comments):
