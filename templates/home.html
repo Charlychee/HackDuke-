@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hack Duke" />
+    <meta name="description" content="Increasing the quality of life for the elderly." />
+    <meta name="keywords" content="health, quality of life, elderly" />
+    <link rel="stylesheet" type="text/css" href="../static/home.css" />
+    <title> Heal Together </title>
+</head>
+<body>
+    <script>
+        function toggleButtonOn(button) {
+            switch (button) {
+                case 'home':
+                    document.getElementById("home").src = "../static/homeclick.png";
+                    break;
+                case 'plus':
+                    document.getElementById("plus").src = "../static/plusclick.png";
+                    break;
+                case 'chat':
+                    document.getElementById("chat").src = "../static/chatclick.png";
+                    break;
+                case 'person':
+                    document.getElementById("person").src = "../static/personclick.png";
+
+            }
+        }
+
+        function toggleButtonOff(button) {
+            switch (button) {
+                case 'home':
+                    document.getElementById("home").src = "../static/home.png";
+                    break;
+                case 'plus':
+                    document.getElementById("plus").src = "../static/plus.png";
+                    break;
+                case 'chat':
+                    document.getElementById("chat").src = "../static/chat.png";
+                    break;
+                case 'person':
+                    document.getElementById("person").src = "../static/person.png";
+
+            }
+        }
+    </script>
+    <div class="topnav">
+        <a><img src="../static/banner.png" id="banner" onmouseover="toggleButtonOn(id)"/></a>
+        <a><img src="../static/home.png" id="home" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a><img src="../static/plus.png" id="plus" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a><img src="../static/chat.png" id="chat" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=80 class="move"/></a>
+        <a><img src="../static/person.png" id="person" onmouseover="toggleButtonOn(id)" onmouseout="toggleButtonOff(id)" width=90 class="move"/></a>
+        <a> <h3 class="button" id="log"> Log Out </h3> </a>
+    </div>
+    <div>
+        <img src="../static/elderly.png"/>
+    </div>
+    
+</body>
+</html>
