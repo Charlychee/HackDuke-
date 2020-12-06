@@ -45,7 +45,9 @@ def list():
 
 @app.route("/match", methods=["POST", "GET"])
 def match_page():
-    return render_template("match.html")
+    if validated:
+        return render_template("match.html")
+    return render_template("login.html")
 
 @app.route("/login", methods=["POST", "GET"])
 def login_page():
@@ -62,7 +64,7 @@ def login_page():
             cred = email
             validated = True
             return render_template("media.html")
-    return render_template("login.html")
+    return render_template("login_fail.html")
 
 @app.route("/",methods=['GET', 'POST'])
 def home_page():
