@@ -83,6 +83,16 @@
         <br>
         <form action="#" id="submissionForm" method="post" enctype="multipart/form-data" onsubmit="return confirm('Do you really want to submit the form?');">
             <div>
+                <label for="email"> Email: <span style="color:red"> * </span><br /></label>
+                <input type="text" name="email" class="input" required />
+            </div>
+            <br>
+            <div>
+                <label for="pwd"> Password: <span style="color:red"> * </span><br /></label>
+                <input type="text" name="pwd" class="input" required />
+            </div>
+            <br>
+            <div>
                 <label for="name"> Full Name: <span style="color:red"> * </span><br /></label>
                 <input type="text" name="name" class="input" required />
             </div>
@@ -120,7 +130,7 @@
             </div>
             <br>
             <div>
-                <label for="img">Select your profile picture </label> 
+                <label for="img">Select your profile picture </label>
                 <input type="file" name="profilePic" id="upload" accept="image/*"> <br />
             </div>
             <br><br>
