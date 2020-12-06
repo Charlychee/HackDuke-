@@ -7,7 +7,6 @@
     <meta name="author" content="Hack Duke" />
     <meta name="description" content="Increasing the quality of life for the elderly." />
     <meta name="keywords" content="health, quality of life, elderly" />
-    <!--<link rel="stylesheet" type="text/css" href="" /> -->
     <title> Heal Together </title>
 <title>Sign Up</title>
 <style id="applicationStylesheet" type="text/css">
@@ -184,6 +183,11 @@ input[type=submit]{
 </style>
 </head>
 <body>
+    <script>
+        function redirectLog() {
+            window.location.replace("{{url_for('home_page')}}");
+        }
+    </script>
 <div class = "Sign_Up">
   <svg class="Background_STYLESTYLE2">
     <rect id="Background_STYLESTYLE2" rx="0" ry="0" x="0" y="0" width="100%" height="100%">
@@ -210,7 +214,7 @@ input[type=submit]{
       <div id = "Input_">
         <input type="text" name="password" class="input" placeholder="Password" required/>
       </div>
-      <div id = "Sign_Up_bw" class>
+      <div id = "Sign_Up_bw">
         <input type="submit">
       </div>
     </form>

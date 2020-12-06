@@ -44,6 +44,10 @@ def list():
 def match_page():
     return render_template("match.html")
 
+@app.route("/login", methods=["POST", "GET"])
+def login_page():
+    return render_template("login.html")
+
 @app.route("/",methods=['GET', 'POST'])
 def home_page():
     return render_template("home.html")
