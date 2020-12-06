@@ -1,0 +1,107 @@
+body {
+	font-family: 'Helvetica', sans-serif;
+	padding-right:0;
+	margin-right:0;
+}
+.topnav {
+	background-color: white;
+	margin-top: -28px;
+	margin-bottom: 20px;
+	margin-left: -25px;
+	margin-right: -25px;
+	background-color: white;
+	padding: 60px;
+}
+
+.topnav a {
+	float: left;
+	text-align: center;
+	padding-left: 4%;
+	text-decoration: none;
+	background-color: white;
+	padding-top: -20px;
+	margin-top: -50px;
+	vertical-align: bottom;
+}
+
+.button {
+	margin: 10px auto;
+	background-color: rgb(74, 145, 247);
+	width: 30%;
+	padding: 8px;
+	color: white;
+	font-weight: 200;
+}
+.button:hover {
+	background-color:#E7EEF8;
+}
+
+#banner {
+	margin-left: -50px;
+	margin-right: 70px;
+}
+
+#log {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.move {
+	margin-top: 15px;
+}
+
+#pic{
+	filter: brightness(50%);
+	position: relative;
+	left: -30px;
+	min-width: 100%;
+	max-width: 105%;
+}
+
+#head {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 60px;
+}
+#descrip {
+	position: absolute;
+	top: 70%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 35px;
+	text-align: center;
+}
+#join {
+	position: absolute;
+	bottom: -3%;
+	left: 50%;
+	width: 10%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.back {
+	background-color: rgb(182, 211, 253);
+	left: -500px;
+	width: 100%;
+	height: 1000px;
+}
+#left {
+  width: 25%;
+  background: red;
+  float: left;
+}
+#profile {
+  width: 25%;
+  height: 50px;
+  padding: 5px;
+  background: yellow;
+}
+#right {
+  margin-left: 15%;
+  height: 200px;
+  background: black;
+}
