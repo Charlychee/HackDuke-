@@ -28,5 +28,9 @@ def match_page():
 def home_page():
     return render_template("home.html")
 
+@app.route("/media",methods=['GET', 'POST'])
+def media_page():
+    return render_template("media.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
