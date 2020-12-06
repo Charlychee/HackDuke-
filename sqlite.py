@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect('database.db')
 print("Opened database successfully")
 try:
-    conn.execute('CREATE TABLE users (email TEXT, pwd TEXT, name TEXT)')
+    conn.execute('CREATE TABLE users (email TEXT, pwd TEXT, name TEXT, path TEXT)')
 except:
     print("nope")
 

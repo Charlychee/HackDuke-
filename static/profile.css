@@ -1,0 +1,84 @@
+body {
+	font-family: 'Helvetica', sans-serif;
+	text-align: center;
+	padding: 20px;
+	background-size: 1450px 850px;
+	background-color: #E7EEF8;
+}
+
+.button {
+	margin: 10px auto;
+	background-color: rgb(74, 145, 247);
+	width: 30%;
+	padding: 8px;
+	color: white;
+	font-weight: 200;
+}
+
+
+.topnav {
+	background-color: white;
+	margin-top: -28px;
+	margin-bottom: 50px;
+	margin-left: -25px;
+	margin-right: -25px;
+	background-color: white;
+	padding: 50px;
+}
+
+.topnav a {
+	float: left;
+	text-align: center;
+	padding-left: 4%;
+	text-decoration: none;
+	background-color: white;
+	padding-top: -20px;
+	margin-top: -50px;
+	vertical-align: bottom;
+
+}
+
+#send {
+	position: relative;
+	bottom: 5%;
+	left: -20%;
+	display: inline-block;
+	min-width: 150px;
+}
+#view {
+	position: relative;
+	bottom: 5%;
+	right: 15%;
+	display: inline-block;
+	min-width: 150px;
+}
+
+#log{
+	width: 100%;
+	margin-top: 30px;
+}
+
+.button:hover {
+	background-color:#E7EEF8;
+}
+
+.move{
+	margin-top: 15px;
+}
+#banner{
+	margin-left:-50px;
+	margin-right:70px;
+}
+
+.column {
+  float: left;
+}
+
+#left {
+  width: 25%;
+  background-color: red;
+}
+
+#right {
+  width: 75%;
+}
