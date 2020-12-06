@@ -48,7 +48,7 @@ body {
 #view {
 	position: relative;
 	bottom: 5%;
-	right: 15%;
+	right: 30%;
 	display: inline-block;
 	min-width: 150px;
 }
@@ -72,11 +72,10 @@ body {
 
 .row{
 	margin: -50px;
-
 }
 
 .column {
-  float: left;
+  float: right;
 }
 
 #left {
@@ -89,7 +88,7 @@ body {
 }
 
 #right {
-  width: 75%;
+  width: 70%;
 }
 
 span{
@@ -146,15 +145,13 @@ span{
   padding-bottom:20px;
 }
 #msg{
-  margin-left: 19%;
   position:relative;
-  top:10px;
-  font-size: 20px;
-  width:280px;
-  padding:12px;
-  border-radius:15px;
-  background-color:rgb(74, 145, 247);
-  color:white;
+  left: 0;
+  width: 50%;
+  margin-top: 0;
+  top:3%;
+  font-size: 50px;
+  color: black;
 }
 #hihi {
   width:75px;
@@ -187,4 +184,40 @@ input[type="txt"]{
   font-size:20px;
   height:70px;
   width:53%;
+}
+
+.block {
+	top: 10%;
+	margin: auto;
+	margin-top: -600px;
+	margin-left: 700px;
+	width: 45%;
+	background-color: white;
+	padding: 20pt;
+	max-width: 580px;
+}
+
+#pic {
+    margin-left: -60%;
+}
+
+#name {
+    position: absolute;
+    right:20%;
+    top:40%;
+    width: 20%;
+    font-weight:200;
+    font-size: 40px;
+}
+
+#desc {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.posts {
+    position: relative;
+    width : 633px;
+    right:-13.35%;
+    margin-top: 50px;
 }

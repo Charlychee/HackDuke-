@@ -24,7 +24,7 @@ def submit_page():
         name = request.form["name"]
         file = request.files['profilePic']
         path = secure_filename(file.filename)
-        full_path = app.instance_path.rstrip("instance") + "profile_pics\\" + path
+        full_path = app.instance_path.rstrip("instance") + "static\\" + path
         file.save(full_path)
         #path.save(os.path.join(app.instance_path), "upload", secure_filename(path.filename))
         #dob = request.form["dob"]
@@ -59,6 +59,8 @@ def match_page():
 
 @app.route("/login", methods=["POST", "GET"])
 def login_page():
+    global cred
+    global validated
     if request.method == "POST":
         email = request.form["email"]
         pwd = request.form["password"]
@@ -70,8 +72,10 @@ def login_page():
         result = cur.fetchone()
         if result:
             cred = email
+            print(cred)
             validated = True
-            return render_template("media.html")
+
+            return profile_page(cred)
     return render_template("login_fail.html")
 
 @app.route("/",methods=['GET', 'POST'])
@@ -85,8 +89,16 @@ def media_page():
     return render_template("login.html")
 
 @app.route("/profile",methods=['GET', 'POST'])
-def profile_page():
-    return render_template("profile.html")
+def profile_page(cred):
+    with sql.connect('database.db') as con:
+        cur = con.cursor()
+        cur.execute("SELECT path, name FROM users WHERE email=(?) ", [cred])
+        con.commit()
+    result = cur.fetchone()
+    output = []
+    output.append('..' + result[0][result[0].find('HackDukeApp')+11:].replace('\\','/'))
+    output.append(result[1])
+    return render_template("profile.html", output=output)
 
 @app.route("/delete/<name>",methods=['GET'])
 def delete_user(name):

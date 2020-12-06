@@ -47,7 +47,7 @@
             }
         }
         function redirectHome() {
-            window.location.replace("{{url_for('home_page')}}");
+                window.location.replace("{{url_for('home_page')}}");
         }
     </script>
     <div class="topnav">
@@ -60,7 +60,7 @@
     </div>
     <div class="row">
         <div id="left">
-        <div class="profile"><img src="../static/samantha.png" class="icon"/><div class="Name">My Profile</div></div>
+        <div class="profile"><img src="{{output[0]}}" class="icon"/><div class="Name">My Profile</div></div>
         <div id="contacts">
           <h1 id="ch">Contacts</h1>
           <hr>
@@ -72,8 +72,16 @@
           <div class="profile"><img src="../static/cancerbaking.png" class="icon"/><div class="Name">Sally</div></div>
         </div>
       </div>
-        <div class="column" id="right"></div>
+        <div class="block">
+        <h1 id="msg"> My Profile</h1>
+        <div id="pic">
+            <label class="buttons"> <img src="{{output[0]}}" width=150/>  </label>
+        </div>
+            <h1 id="name"> {{output[1]}} <br/> <span id="desc">Liver cancer survivor, <br> Mother of twins <	&#51; <br></span></h1>
+        <h3 class="button" id="view">Edit Profile</h3>
+        </div>
     </div>
+    <img src="../static/PastPosts.png" class="posts">
     
 </body>
 </html>
